@@ -5,7 +5,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('messages1.urls', namespace='message')),
-    path("users/", include("users1.urls", namespace="users")),
-    path("blog/", include("blog1.urls", namespace="blog")),
+    path('', include('message.urls', namespace='message')),
+    path("users/", include("users.urls", namespace="users")),
+    path("blog/", include("blog.urls", namespace="blog")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
